@@ -15,7 +15,13 @@ SYMBOLS = "↑→↓←"
 
 grid = [-1]
 def get_grid() -> list:
-    return grid
+    if DIFFICULTY in (0,1):
+        return grid
+    new_grid = [['_' for i in range(8)]]
+    for i in range(6):
+        new_grid.append(['_', grid[i][0], grid[i][1], grid[i][2], grid[i][3], grid[i][4], grid[i][5], '_'])
+    new_grid.append(['_' for i in range(8)])
+    return [[new_grid[i][j] for j in range(position_x,position_x+3)] for i in range(position_y,position_y+3)]
 
 OBSTACLE_COUNT_BY_DIFFICULTY = (0,7,14,20)
 def generate_grid() -> list:
@@ -145,9 +151,9 @@ def grade():
     print("Algorithm Terminated!")
     did_win = position_x+position_y == 10
     print("Your robot reached the exit!" if did_win else "Your robot failed to reach the exit.")
-    score = (3 if did_win else 0) + fruits + (4 * DIFFICULTY)
+    score = (3 if did_win else 0) + fruits + (4 * DIFFICULTY if did_win else 0)
     print("Score: " + str(score))
-    print("win: " + str(3 if did_win else 0) + "/3" + ", apples: " + str(fruits) + "/6" + ", difficulty: " + str(4 * DIFFICULTY) + "/8")
+    print("win: " + str(3 if did_win else 0) + "/3" + ", apples: " + str(fruits) + "/6" + ", difficulty: " + str(4 * DIFFICULTY if did_win else 0) + "/8")
 
     if (score > 4):
         print("You've received at least four points. Email your solution to tchsaero@tcusd.net to submit, and/or try for more points by improving your algorithm.")
