@@ -78,6 +78,10 @@ position_y : int = 0
 step : int = 0
 direction : int = 1
 fruits = 0
+def get_position():
+    return [position_x,position_y]
+def get_direction():
+    return direction
 
 halt = True
 def test(diff : int = 0):
