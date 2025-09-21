@@ -17,6 +17,11 @@ move_forwards() : alias - go() : moves the robot one tile in the direction it is
 turn_right() : alias - rr() : rotates the robot to the right 90 degrees.
 turn_left() : alias - rl() : rotates the robot to the left 90 degrees.
 
+And getters:
+get_grid()
+get_position()
+get_direction()
+
 ## BONUS POINTS
 The task comes in three difficulties that you may select from.
 BASIC: No changes, collect as many apples as possible.
