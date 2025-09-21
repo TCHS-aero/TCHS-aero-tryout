@@ -114,12 +114,15 @@ def move_forwards():
     if max(new_pos) >= 6 or min(new_pos) < 0:
         debug_buffer.append("Failed to move to position: " + str(new_pos))
     else:
-        position_x = new_pos[0]
-        position_y = new_pos[1]
-        step += 1
-        if grid[position_y][position_x] == 'o':
-            fruits += 1
-            grid[position_y][position_x] = '.'
+        if grid[new_pos[1]][new_pos[0]] == '#':
+            debug_buffer.append("Hit a wall at position: " + str(new_pos))
+        else:
+            position_x = new_pos[0]
+            position_y = new_pos[1]
+            step += 1
+            if grid[position_y][position_x] == 'o':
+                fruits += 1
+                grid[position_y][position_x] = '.'
 
     redraw()
 def turn_right():
@@ -142,7 +145,7 @@ def grade():
     print("Algorithm Terminated!")
     did_win = position_x+position_y == 10
     print("Your robot reached the exit!" if did_win else "Your robot failed to reach the exit.")
-    score = 3 if did_win else 0 + fruits + (4 * DIFFICULTY)
+    score = (3 if did_win else 0) + fruits + (4 * DIFFICULTY)
     print("Score: " + str(score))
     print("win: " + str(3 if did_win else 0) + "/3" + ", apples: " + str(fruits) + "/6" + ", difficulty: " + str(4 * DIFFICULTY) + "/8")
 

@@ -22,6 +22,8 @@ The task comes in three difficulties that you may select from.
 BASIC: No changes, collect as many apples as possible.
 HARD: There are now 7 "walls" on the grid that the robot must navigate around. Attempting to move into a wall will cause nothing to happen. Collect all of the apples.
 TOUGH: The robot now only "sees" tiles orthogonally or diagonally adjacent to itself (<= 9 tiles at any time). Evading this restriction invalidates the difficulty. There are now 14 walls.
+Note: TOUGH difficulty (DIFFICULTY == 2) only modifies the get_grid() function.
+
 Brute force algorithms are discouraged. If you can solve the problem easily, push yourself to optimize your solution to use less steps. 
 
 ## FAQ
@@ -35,9 +37,8 @@ If you have additional questions, feel free to ask.
 ## ENVIRONMENT
 The only provided environment is a Python3 environment. If you would like to use a different language, you may, but you will not receive instant feedback from the tester. 
 If you choose to use a language other than python, syntax errors will not be held against you.
-If you do not know any programming languages, or do not wish to use one, you may instead use pseudocode. If you choose this option, your solution(s) must be written on physical paper.
+If you do not know any programming languages, or do not wish to use one, you may instead use pseudocode. If you choose this option, your solution(s) must be written on physical paper and submitted as an image.
 
-To be considered for the TCHS Aero team, you need to be able to collect at least one apple consistently. 
-We also recommend that you learn enough Python to be able to complete this task in order to be successful on the team.
+To be considered for the TCHS Aero team, your algorithm should be able to collect at least one apple consistently and reach the exit.
 
 Good luck.

@@ -1,7 +1,8 @@
-import tester
+# Editing these imports may result in an invalid solution.
 from tester import test, move_forwards, turn_right, turn_left, go, tl, tr, grade, position_x, position_y, direction, get_grid
 
-SELECT_DIFFICULTY = 0
+# Select the difficulty of the tester from 0 to 2.
+SELECT_DIFFICULTY = 1
 test(SELECT_DIFFICULTY)
 
 '''
@@ -19,6 +20,9 @@ direction : int : The current direction the robot is facing. 0 = North, 1 = East
 
 
 def sample():
+    for i in range(6):
+        if get_grid()[0][i] == 'o':
+            print("Found an apple in the first row!")
     go()
     tr()
     go()
