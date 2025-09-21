@@ -13,9 +13,8 @@ move_forwards() / go() : moves forwards in the direction specified by direction.
 turn_right() / tr() : turns right, or clockwise. This increments direction.
 turn_left() / tl() : turns left, or counter-clockwise. This decrements direction.
 get_grid() -> list : Returns the state of the grid and everything on it. '.' = empty, 'o' = fruit, '#' = wall. The robot will not be included.
-position_x : int : The current x coordinate.
-position_y : int : The current y coordinate.
-direction : int : The current direction the robot is facing. 0 = North, 1 = East, 2 = South, 3 = West
+get_position() -> list : Returns the position of the robot as a list in the format: [position_x, position_y]
+get_direction() -> int : Returns the direction the robot is facing as an int. 0: North , 1: East , 2: South , 3: West
 '''
 
 
