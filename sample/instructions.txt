@@ -1,0 +1,21 @@
+SAMPLE PROBLEM TEST
+
+YOUR TASK
+Your task is to design the movement for a ground-based robot.
+
+The robot lives on a 6x6 grid. It can only inhabit one tile at any time, and it begins in the top-left corner (0,0).
+Your task is to use the provided interface to move the robot to the bottom right corner (5,5) and collect as many fruits as possible.
+
+Your program will receive input in the form of function calls.
+When you run your program, it will import the required tester modules, and send a single call to `initialize_robot()`, passing a single argument: the state of the board, represented as a two-dimensional List.
+
+You will have access to three api functions:
+move_forwards() : alias - go() : moves the robot one tile in the direction it is facing. 
+rotate_right() : alias - rr() : rotates the robot to the right 90 degrees.
+rotate_left() : alias - rl() : rotates the robot to the left 90 degrees.
+
+The task comes in three difficulties that you may select from.
+
+BASIC: No changes
+HARD: There are new 3-6 "walls" on the grid that the robot must navigate around.
+TOUGH: The robot now only "sees" tiles orthogonally or diagonally adjacent to itself (<= 9 tiles at any time)
