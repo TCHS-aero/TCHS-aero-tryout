@@ -17,16 +17,14 @@ get_position() -> list : Returns the position of the robot as a list in the form
 get_direction() -> int : Returns the direction the robot is facing as an int. 0: North , 1: East , 2: South , 3: West
 '''
 
-
+# This code serves to display valid syntax for this problem. You may safely delete everything following this except for "grade()"
 def sample():
     print('\ngrid: ', get_grid())
     go()
     tr()
     go()
     go()
-    print(get_position()[0])
-
-# Delete the following line to remove the sample execution from the program
+    print(get_position())
 sample()
 
 # Your algorithm must end with a call to grade().

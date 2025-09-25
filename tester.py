@@ -10,20 +10,14 @@ import random
 import copy
 from collections import deque
 
-DIFFICULTY : int = 3
+DIFFICULTY : int = 0
 SYMBOLS = "↑→↓←"
 
 grid = [-1]
 def get_grid() -> list:
-    if DIFFICULTY in (0,1):
-        return grid
-    new_grid = [['_' for i in range(8)]]
-    for i in range(6):
-        new_grid.append(['_', grid[i][0], grid[i][1], grid[i][2], grid[i][3], grid[i][4], grid[i][5], '_'])
-    new_grid.append(['_' for i in range(8)])
-    return [[new_grid[i][j] for j in range(position_x,position_x+3)] for i in range(position_y,position_y+3)]
+    return grid
 
-OBSTACLE_COUNT_BY_DIFFICULTY = (0,7,14,20)
+OBSTACLE_COUNT_BY_DIFFICULTY = (0,1,8,16)
 def generate_grid() -> list:
     new_grid = [['.' for i in range(6)] for j in range(6)]
 
